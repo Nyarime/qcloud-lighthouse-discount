@@ -3,7 +3,7 @@ from os import system
 
 print(f"腾讯云轻量优惠券计算器by Nyarime (Build20220227)" + "\n")
 print(f"通用型/存储型/企业型任何用户都可以购买，无需企业认证! \n")
-print(f"项目地址: https://github.com/Nyarime/qcloud-lighthouse-discount）" + "\n")
+print(f"项目地址: https://github.com/Nyarime/qcloud-lighthouse-discount" + "\n")
 p = floor(float(input("需续费价格:")))
 w = floor(float(input("最低付费门槛:")))
 count = 0
