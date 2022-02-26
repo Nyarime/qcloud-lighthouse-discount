@@ -1,18 +1,20 @@
 from math import ceil,floor
 from os import system
 
-print(f"腾讯云优惠券计算器by Nyarime 更新时间:2022/2/27" + "\n")
-print(f"通用型/存储型/企业型任何用户都可以购买，无需企业认证!")
-print(f"项目地址: https://github.com/Nyarime/qcloud-lighthouse-discount" + "\n")
-p = floor(float(input("需续费价格(人民币):")))
-w = floor(float(input("最低付费:")))
+print(f"腾讯云轻量优惠券计算器by Nyarime (Build20220227)" + "\n")
+print(f"通用型/存储型/企业型任何用户都可以购买，无需企业认证! \n")
+print(f"项目地址: https://github.com/Nyarime/qcloud-lighthouse-discount）" + "\n")
+p = floor(float(input("需续费价格:")))
+w = floor(float(input("最低付费门槛:")))
 count = 0
 
 saver = input("是否保存结果至LightHouse.txt?(y/n):")
 if saver == "y":
     f = open('LightHouse.txt', 'w')
-    f.write("需续费总价格(人民币):" + str(p) + "\n")
-    f.write("最低付费:" + str(w) + "\n")
+    f.write("腾讯云轻量优惠券计算器 by Nyarime (Build20220227)\n")
+    f.write("需续费价格:" + str(p) + "\n")
+    f.write("最低付费:" + str(w) + "\n\n")
+
 
 prices = [
     [32, "非内地通用32元"],
@@ -59,14 +61,14 @@ prices = [
 need = w - p
 if need < 0:
     if saver == "y":
-        f.write("错误，请检查数值")
-    print("错误，请检查数值")
+        f.write("错误，请检查数值是否正确")
+    print("错误，请检查数值是否正确")
     system("pause")
     exit()
 if need == 0:
     if saver == "y":
-        f.write("无需计算，请直接购买")
-    print("无需计算，请直接购买")
+        f.write("无需计算，请直接购买产品")
+    print("无需计算，请直接购买产品")
     system("pause")
     exit()
 
@@ -85,12 +87,12 @@ def out(data, t):
         else:
             dic[item] = 1
     if saver == "y":
-        f.write("- 需补充" + str(int(t)) + "元,方案: 购买")
-    print("- 需补充" + str(int(t)) + "元,方案:", end=" 购买")
+        f.write("- 需补充" + str(int(t)) + "元,方案: 购买 ")
+    print("- 需补充" + str(int(t)) + "元,方案:", end=" 购买 ")
     for item in dic.keys():
         if saver == "y":
-            f.write(str(dic[item]) + "月" + item)
-        print(str(dic[item]) + "月" + item, end=" ")
+            f.write(str(dic[item]) + "月" + item + " ")
+        print(str(dic[item]) + "月" + item, end= " ")
     print()
     if saver == "y":
         f.write("\n")
@@ -112,8 +114,11 @@ def compute(n):
 
 
 compute(need)
-print("计算完毕，共" + str(count) + "种优化方案")
+print("\n")
+print("计算完毕：")
+print("已为您生成" + str(count) + "种优化方案")
 if saver == "y":
-    f.write("共" + str(count) + "种优化方案")
+    f.write("\n已生成" + str(count) + "种优化方案\n")
+    f.write("项目地址: https://github.com/Nyarime/qcloud-lighthouse-discount")
     f.close()
 system("pause")
