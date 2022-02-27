@@ -67,7 +67,7 @@ if need < 0:
     if os()=='Windows':
         system("pause")
     elif os()=='Linux':
-        system("read -n 1")
+        system("bash -c read -n 1")
     else:
         print("系统不支持的操作")
     exit()
@@ -78,7 +78,7 @@ if need == 0:
     if os()=='Windows':
         system("pause")
     elif os()=='Linux':
-        system("read -n 1")
+        system("bash -c read -n 1")
     else:
         print("系统不支持的操作")
     exit()
@@ -135,6 +135,6 @@ if saver == "y":
 if os()=='Windows':
     system("pause")
 elif os()=='Linux':
-    system("read -n 1")
+    system("bash -c read -n 1")
 else:
     print("系统不支持的操作")
