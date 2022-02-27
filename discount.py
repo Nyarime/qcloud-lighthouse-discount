@@ -1,5 +1,6 @@
 from math import ceil,floor
 from os import system
+from platform import system as os
 
 print(f"腾讯云轻量优惠券计算器 by Nyarime (Build20220227)" + "\n")
 print(f"通用型/存储型/企业型任何用户都可以购买，无需企业认证! \n")
@@ -63,13 +64,23 @@ if need < 0:
     if saver == "y":
         f.write("错误，请检查数值是否正确")
     print("错误，请检查数值是否正确")
-    system("pause")
+    if os()=='Windows':
+        system("pause")
+    elif os()=='Linux':
+        system("read -n 1")
+    else:
+        print("系统不支持的操作")
     exit()
 if need == 0:
     if saver == "y":
         f.write("无需计算，请直接购买产品")
     print("无需计算，请直接购买产品")
-    system("pause")
+    if os()=='Windows':
+        system("pause")
+    elif os()=='Linux':
+        system("read -n 1")
+    else:
+        print("系统不支持的操作")
     exit()
 
 print("需计算" + str(need) + "元")
@@ -121,4 +132,9 @@ if saver == "y":
     f.write("\n已生成" + str(count) + "种优化方案\n")
     f.write("项目地址: https://github.com/Nyarime/qcloud-lighthouse-discount")
     f.close()
-system("pause")
+if os()=='Windows':
+    system("pause")
+elif os()=='Linux':
+    system("read -n 1")
+else:
+    print("系统不支持的操作")
