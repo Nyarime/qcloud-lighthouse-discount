@@ -2,7 +2,7 @@ from math import ceil,floor
 from os import system
 from platform import system as os
 
-print(f"腾讯云轻量优惠券计算器 by Nyarime (Build20220227) \n")
+print(f"腾讯云轻量优惠券计算器 by Nyarime (Build20220228) \n")
 print(f"通用型/存储型/企业型任何用户都可以购买，无需企业型认证! \n")
 print(f"项目地址: https://github.com/Nyarime/qcloud-lighthouse-discount" + "\n")
 p = floor(float(input("需续费价格:")))
@@ -12,7 +12,7 @@ count = 0
 saver = input("是否保存结果至LightHouse.txt?(y/n):")
 if saver == "y":
     f = open('LightHouse.txt', 'w')
-    f.write("腾讯云轻量优惠券计算器 by Nyarime (Build20220227)\n")
+    f.write("腾讯云轻量优惠券计算器 by Nyarime (Build20220228)\n")
     f.write("需续费价格:" + str(p) + "\n")
     f.write("最低付费:" + str(w) + "\n\n")
 
