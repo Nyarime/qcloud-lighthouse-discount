@@ -2,7 +2,7 @@ from math import ceil,floor
 from os import system
 from platform import system as os
 
-print(f"腾讯云轻量优惠券计算器 by Nyarime (Build20220227)" + "\n")
+print(f"腾讯云轻量优惠券计算器 by Nyarime (Build20220227) \n")
 print(f"通用型/存储型/企业型任何用户都可以购买，无需企业认证! \n")
 print(f"项目地址: https://github.com/Nyarime/qcloud-lighthouse-discount" + "\n")
 p = floor(float(input("需续费价格:")))
@@ -24,24 +24,24 @@ prices = [
     [67, "非内地通用67元"],
     [100, "非内地通用100元"],
     [133, "非内地通用133元"],
-    [54, "非内地通用Windows54元"],
-    [72, "非内地通用Windows72元"],
-    [96, "非内地通用Windows96元"],
-    [121, "非内地通用Windows121元"],
-    [180, "非内地通用Windows180元"],
-    [239, "非内地通用Windows239元"],
+    [54, "非内地通用(Windows)54元"],
+    [72, "非内地通用(Windows)72元"],
+    [96, "非内地通用(Windows)96元"],
+    [121, "非内地通用(Windows)121元"],
+    [180, "非内地通用(Windows)180元"],
+    [239, "非内地通用(Windows)239元"],
     [258, "非内地企业258元"],
     [405, "非内地企业405元"],
     [590, "非内地企业590元"],
     [780, "非内地企业780元"],
     [1150, "非内地企业1150元"],
     [1520, "非内地企业1520元"],
-    [455, "非内地企业Windows455元"],
-    [740, "非内地企业Windows740元"],
-    [1080, "非内地企业Windows1080元"],
-    [1420, "非内地企业Windows1420元"],
-    [2100, "非内地企业Windows2100元"],
-    [2780, "非内地企业Windows2780元"],
+    [455, "非内地企业(Windows)455元"],
+    [740, "非内地企业(Windows)740元"],
+    [1080, "非内地企业(Windows)1080元"],
+    [1420, "非内地企业(Windows)1420元"],
+    [2100, "非内地企业(Windows)2100元"],
+    [2780, "非内地企业(Windows)2780元"],
     [50, "内地通用50元"],
     [60, "内地通用60元"],
     [85, "内地通用85元"],
@@ -64,7 +64,7 @@ if need < 0:
     if saver == "y":
         f.write("错误，请检查数值是否正确")
     print("错误，请检查数值是否正确")
-    if os()=='Windows':
+    if os()=='(Windows)':
         system("pause")
     elif os()=='Linux':
         system("bash -c read -n 1")
@@ -75,7 +75,7 @@ if need == 0:
     if saver == "y":
         f.write("无需计算，请直接购买产品")
     print("无需计算，请直接购买产品")
-    if os()=='Windows':
+    if os()=='(Windows)':
         system("pause")
     elif os()=='Linux':
         system("bash -c read -n 1")
@@ -132,7 +132,7 @@ if saver == "y":
     f.write("\n已生成" + str(count) + "种优化方案\n")
     f.write("项目地址: https://github.com/Nyarime/qcloud-lighthouse-discount")
     f.close()
-if os()=='Windows':
+if os()=='(Windows)':
     system("pause")
 elif os()=='Linux':
     system("bash -c read -n 1")
